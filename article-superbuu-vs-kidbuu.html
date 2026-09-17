@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Buu vs Kid Buu : ce que le manga établit — Debat-Z</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #faf7f2;
+      --bg-alt:    #f3ede3;
+      --ink:       #1a1208;
+      --ink-light: #4a3f2f;
+      --accent:    #8b1a1a;
+      --gold:      #b8860b;
+      --border:    #d4c5a9;
+      --panel-bg:  #1a1208;
+      --serif:     'Source Serif 4', Georgia, serif;
+      --sans:      'Oswald', sans-serif;
+      --max-w:     780px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: var(--ink);
+      padding: 0.6rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header a {
+      color: #e8d5a3;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      transition: opacity .2s;
+    }
+    .site-header a:hover { opacity: 1; }
+    .site-header .sep { color: #555; }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--ink);
+      color: #e8d5a3;
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(139,26,26,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-family: var(--sans);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: 1rem;
+      color: #b0a080;
+      max-width: 540px;
+      margin: 0 auto 2rem;
+      font-style: italic;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-size: 0.8rem;
+      color: #666;
+      font-family: var(--sans);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .hero-meta span { color: #888; }
+
+    /* ── ToC ── */
+    .toc-wrapper {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      max-width: var(--max-w);
+      margin: 2.5rem auto 0;
+      padding: 1.5rem 2rem;
+    }
+    .toc-wrapper h2 {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .toc-wrapper ol {
+      padding-left: 1.2rem;
+      color: var(--ink-light);
+      font-size: 0.95rem;
+    }
+    .toc-wrapper li { margin-bottom: 0.4rem; }
+    .toc-wrapper a {
+      color: var(--ink-light);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .toc-wrapper a:hover { color: var(--accent); }
+
+    /* ── Article body ── */
+    .article-body {
+      max-width: var(--max-w);
+      margin: 3rem auto 5rem;
+      padding: 0 1.5rem;
+    }
+
+    /* ── Sections ── */
+    .section { margin-bottom: 4rem; }
+
+    .section-intro {
+      border-left: 3px solid var(--border);
+      padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .section-intro p {
+      color: var(--ink-light);
+      font-style: italic;
+    }
+
+    h2.part {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    h2.section-title {
+      font-family: var(--sans);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 1.8rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    h3.sub {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin: 2.5rem 0 1rem;
+    }
+
+    p { margin-bottom: 1.3rem; }
+
+    strong { color: var(--ink); font-weight: 600; }
+
+    /* ── Manga panels ── */
+    .panel-block {
+      margin: 2rem -0.5rem;
+      background: var(--panel-bg);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .panel-block img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    .panel-caption {
+      background: var(--panel-bg);
+      color: #888;
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      padding: 0.5rem 1rem 0.6rem;
+      text-transform: uppercase;
+    }
+
+    .panel-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      margin: 2rem -0.5rem;
+      background: var(--panel-bg);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .panel-duo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .panel-duo .panel-caption {
+      grid-column: 1 / -1;
+    }
+
+    /* ── Quote / proof block ── */
+    .proof {
+      border-left: 4px solid var(--accent);
+      background: var(--bg-alt);
+      padding: 1.2rem 1.5rem;
+      margin: 1.8rem 0;
+      font-style: italic;
+      color: var(--ink);
+    }
+    .proof cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+
+    /* ── Hierarchy box ── */
+    .hierarchy {
+      background: var(--ink);
+      color: #e8d5a3;
+      padding: 2rem 2.5rem;
+      margin: 2.5rem 0;
+      border-radius: 4px;
+      font-family: var(--sans);
+    }
+    .hierarchy h3 {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .hier-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+    .hier-label {
+      font-size: 1.1rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .hier-label.big { color: #fff; font-size: 1.3rem; }
+    .hier-label.danger { color: #e05555; }
+    .hier-gt {
+      font-size: 1.4rem;
+      color: var(--gold);
+      font-weight: 700;
+      padding: 0 0.2rem;
+    }
+    .hier-note {
+      color: #888;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      margin-top: 0.2rem;
+    }
+    .hier-divider {
+      border: none;
+      border-top: 1px solid #333;
+      margin: 1rem 0;
+    }
+    .hier-conclusion {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #333;
+      color: var(--gold);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Note box ── */
+    .note-box {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .note-box .note-label {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+    .note-box p { margin-bottom: 0; font-size: 0.95rem; color: var(--ink-light); }
+
+    /* ── Methodology tag ── */
+    .method-tag {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.7rem;
+      border-radius: 2px;
+      margin-bottom: 0.8rem;
+    }
+
+    /* ── Article links ── */
+    .articles-lies {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      margin-top: 4rem;
+    }
+    .articles-lies h3 {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 1rem;
+    }
+    .articles-lies ul {
+      list-style: none;
+      padding: 0;
+    }
+    .articles-lies li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      color: var(--ink-light);
+    }
+    .articles-lies li:last-child { border-bottom: none; }
+    .articles-lies li::before {
+      content: '→ ';
+      color: var(--accent);
+      font-family: var(--sans);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--ink);
+      color: #555;
+      text-align: center;
+      padding: 2rem;
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    footer a { color: #888; text-decoration: none; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero { padding: 2.5rem 1.2rem 2.5rem; }
+      .hero-meta { flex-direction: column; gap: 0.4rem; align-items: center; }
+      .toc-wrapper { margin: 1.5rem 1rem 0; }
+      .article-body { margin: 2rem auto 3rem; padding: 0 1.2rem; }
+      .panel-duo { grid-template-columns: 1fr; }
+      .hierarchy { padding: 1.5rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<header class="site-header">
+  <a href="/">Debat-Z</a>
+  <span class="sep">›</span>
+  <a href="/articles">Articles</a>
+  <span class="sep">›</span>
+  <a href="#">Arc Boo</a>
+</header>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <p class="hero-tag">Dragonballologie · Arc Boo · Power Scaling</p>
+  <h1>Super Buu vs Kid Buu :<br><em>ce que le manga établit</em></h1>
+  <p class="hero-sub">Une démonstration narrative. Pas une opinion.</p>
+  <div class="hero-meta">
+    <span>Mihawkis</span>
+    <span>·</span>
+    <span>Debat-Z</span>
+    <span>·</span>
+    <span>2026</span>
+  </div>
+</section>
+
+<!-- ── ToC ── -->
+<nav class="toc-wrapper" aria-label="Sommaire">
+  <h2>Sommaire</h2>
+  <ol>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#plafond">Le plafond de Goku SSJ3 face à Gros Buu</a></li>
+    <li><a href="#superbuu">Super Buu : une menace hors de portée</a></li>
+    <li><a href="#kidbuu">Kid Buu : un adversaire calibré</a></li>
+    <li><a href="#hierarchie">La hiérarchie que la narration impose</a></li>
+    <li><a href="#kaioshinkai">Note sur le Kaioshinkai</a></li>
+  </ol>
+</nav>
+
+<!-- ── Corps de l'article ── -->
+<main class="article-body">
+
+  <!-- INTRO -->
+  <section class="section" id="intro">
+    <div class="section-intro">
+      <p>Dans les discussions autour de l'arc Boo, une affirmation revient avec insistance : Kid Buu serait le Buu le plus puissant. L'argument repose généralement sur une intuition narrative — le combat final oppose Kid Buu à Goku, donc Kid Buu est forcément l'adversaire ultime.</p>
+      <p>La dragonballologie ne travaille pas avec des intuitions. Elle travaille avec ce que le manga <em>montre</em>. Et ce que le manga montre, à travers le comportement des personnages et les preuves textuelles, est sans ambiguïté : <strong>Super Buu dépasse largement Kid Buu en puissance.</strong></p>
+      <p>Cet article démontre cette hiérarchie. Deux questions connexes feront l'objet d'articles séparés : les particularités du combat Goku vs Gros Buu, et l'incohérence narrative de l'apparition de Kid Buu.</p>
+    </div>
+  </section>
+
+  <!-- PARTIE I -->
+  <section class="section" id="plafond">
+    <p class="part">Partie I</p>
+    <h2 class="section-title">Le plafond de Goku SSJ3<br>face à Gros Buu</h2>
+
+    <p>Quand Goku en Super Saiyan 3 affronte Gros Buu, le combat est équilibré. Aucun des deux ne prend l'avantage décisif. Gros Buu encaisse, régénère, et copie les techniques de Goku en temps réel.</p>
+
+    <div class="panel-block">
+      <img src="images/panel-combat-ssj3.jpg" alt="SSJ3 Goku combat Gros Buu — échange de coups">
+      <div class="panel-caption">Manga DB · Arc Boo — SSJ3 Goku ne parvient pas à prendre l'avantage sur Gros Buu</div>
+    </div>
+
+    <p>Goku ne peut pas tuer Buu dans ces conditions. La régénération de Buu exige une destruction totale, et produire une telle puissance en une seule frappe excède ses capacités. Il redevient simplement normal.</p>
+
+    <div class="panel-block">
+      <img src="images/panel-goku-normal.jpg" alt="Goku repasse en forme normale — OUF">
+      <div class="panel-caption">Gros Buu apprécie le combat. Goku, lui, est épuisé.</div>
+    </div>
+
+    <p>À cette limite de puissance s'ajoute une contrainte physique que Goku formule lui-même :</p>
+
+    <div class="panel-block">
+      <img src="images/panel-ssj3-drain.jpg" alt="Goku explique le drain d'énergie du SSJ3 dans le monde des vivants">
+      <div class="panel-caption">Le SSJ3 dans le monde des vivants est une transformation que Goku ne peut pas maintenir librement.</div>
+    </div>
+
+    <div class="proof">
+      «&nbsp;Parce qu'ici, où le concept de temps existe, utiliser une telle quantité d'énergie est beaucoup trop épuisant… Je n'ai pas le droit de la pratiquer en dehors de l'Autre Monde.&nbsp;»
+      <cite>— Goku, à propos du Super Saiyan 3</cite>
+    </div>
+
+    <p>C'est dans ce contexte que Piccolo lui pose la question directement.</p>
+
+    <div class="panel-block">
+      <img src="images/panel-piccolo-penses-pas-gagner.jpg" alt="Piccolo demande à Goku s'il aurait pu battre Majin Boo en SSJ3 — Goku répond qu'il pense pas avoir pu être en mesure de gagner">
+      <div class="panel-caption">Échange clé : Piccolo pousse Goku à évaluer ses chances réelles contre Gros Buu.</div>
+    </div>
+
+    <div class="proof">
+      «&nbsp;Je me trompe&nbsp;? Tout à l'heure, si tu avais poussé à fond ta transformation en Super Saiyan 3, tu aurais pu terrasser Majin Boo, non&nbsp;?&nbsp;»<br>
+      «&nbsp;<strong>Je pense pas avoir pu être en mesure de gagner…</strong> Ben je sais pas trop… La puissance de Majin Boo est vraiment démesurée…&nbsp;»
+      <cite>— Piccolo, puis Goku</cite>
+    </div>
+
+    <p>C'est une évaluation faite <em>sous contrainte réelle</em>, à chaud, par le principal concerné. Ce n'est pas de la fausse modestie — c'est notre ancre de référence pour calibrer le niveau de Goku SSJ3.</p>
+  </section>
+
+  <!-- PARTIE II -->
+  <section class="section" id="superbuu">
+    <p class="part">Partie II</p>
+    <h2 class="section-title">Super Buu : une menace<br>structurellement hors de portée</h2>
+
+    <p>Le passage de Gros Buu à Super Buu marque un saut qualitatif que la narration ne proclame pas — elle le démontre, à travers trois preuves indépendantes qui convergent vers la même conclusion.</p>
+
+    <h3 class="sub">2.1 — L'argument comportemental</h3>
+
+    <span class="method-tag">Preuve primaire</span>
+
+    <p>Goku est ressuscité. Il a tout le temps de combattre. Pourtant, il ne tente jamais d'affronter Super Buu — sous aucune de ses formes. Ni Buucolo, ni Super Buu de base. Un personnage qui cherche systématiquement à se mesurer aux adversaires les plus forts ne fait aucune tentative.</p>
+
+    <div class="panel-block">
+      <img src="images/panel-gotenks-defusion-superbuu.jpg" alt="Gotenks défusionne, Super Buu apparaît sous sa forme de base. Goku : je suis un peu déçu, Gohan va pouvoir s'en sortir tout seul.">
+      <div class="panel-caption">Super Buu apparaît après la défusion de Gotenks. Réaction de Goku : il s'écarte. Il sait.</div>
+    </div>
+
+    <p>Il ne teste pas. Il <em>s'écarte</em>, et estime que Gohan peut s'en sortir seul. Plus tôt dans l'arc, il a même dit à Piccolo qu'il avait annoncé à Gros Buu l'arrivée d'un combattant bien plus fort que lui.</p>
+
+    <div class="panel-block">
+      <img src="images/panel-piccolo-quelquun-plus-fort.jpg" alt="Goku explique à Piccolo qu'il a dit à Buu que quelqu'un de plus fort viendrait. Buu avait l'air ravi.">
+      <div class="panel-caption">Goku sait qu'il n'est pas au niveau — et il l'assume explicitement devant Piccolo.</div>
+    </div>
+
+    <div class="note-box">
+      <div class="note-label">Principe dragonballologie</div>
+      <p>Le comportement d'un personnage est une preuve primaire. On ne peut pas invoquer une déclaration ultérieure pour contredire ce qu'un comportement établit avec constance sur plusieurs dizaines de chapitres.</p>
+    </div>
+
+    <h3 class="sub">2.2 — La fusion comme condition sine qua non</h3>
+
+    <p>À l'intérieur du corps de Buu, quand la question de sortir se pose, la seule option que Goku envisage est la fusion Potala. Pas le Super Saiyan 3. Pas Goku et Vegeta ensemble. <strong>La fusion Potala — Végetto.</strong></p>
+
+    <div class="panel-block">
+      <img src="images/panel-on-va-se-faire-bousiller.jpg" alt="Goku dit on va se faire bousiller si on sort comme ça. Vegeta dit que Boo est peut-être moins fort qu'avant mais donnera du fil à retordre. Goku regrette que Vegeta ait cassé son Potala.">
+      <div class="panel-caption">Sans fusion, Goku et Vegeta savent qu'ils ne font pas le poids face à Super Buu.</div>
+    </div>
+
+    <p>Goku insiste pour que Vegeta conserve le Potala. Quand Vegeta refuse par principe de se battre en duo fusionné :</p>
+
+    <div class="panel-block">
+      <img src="images/panel-vegeta-refuse-fusion.jpg" alt="Vegeta refuse catégoriquement la fusion, dit qu'il a un plan pour battre Boo seul. Goku aurait voulu qu'il garde le Potala.">
+      <div class="panel-caption">Vegeta refuse la fusion. Goku encaisse, mais il sait ce que ça implique.</div>
+    </div>
+
+    <p>Puis vient le moment décisif. À l'intérieur du corps de Buu, Goku tente encore une fois de planifier la fusion pour la sortie :</p>
+
+    <div class="panel-block">
+      <img src="images/panel-potala-interieur.jpg" alt="Goku dit que quand on sortira du corps de Boo on pourra fusionner de nouveau. Vegeta enlève son Potala.">
+      <div class="panel-caption">Goku croit encore à la possibilité de fusionner en sortant.</div>
+    </div>
+
+    <div class="panel-block">
+      <img src="images/panel-goku-panique-potala.jpg" alt="Goku panique : Et en plus tu es mort ! Si tu fusionnes pas avec moi tu devras retourner dans l'Autre Monde ! Qu'est-ce que t'as fait ?! On pourra plus jamais fusionner !">
+      <div class="panel-caption">Panique totale de Goku quand il réalise que Vegeta a retiré le Potala.</div>
+    </div>
+
+    <div class="proof">
+      «&nbsp;<strong>Qu'est-ce que t'as fait&nbsp;?! On pourra plus jamais fusionner&nbsp;!</strong>&nbsp;»
+      <cite>— Goku, après que Vegeta retire le Potala</cite>
+    </div>
+
+    <p>Cette réaction dit tout. Sans la fusion, Goku et Vegeta ensemble ne se voient pas en mesure de vaincre Super Buu.</p>
+
+    <h3 class="sub">2.3 — La validation définitive</h3>
+
+    <div class="panel-block">
+      <img src="images/panel-une-bouchee.jpg" alt="Si on avait pu fusionner en ressortant, on n'en aurait fait qu'une bouchée ! C'est pour ça que je t'avais demandé de garder ton Potala !">
+      <div class="panel-caption">Goku formule lui-même la hiérarchie : Végetto aurait écrasé Super Buu.</div>
+    </div>
+
+    <div class="proof">
+      «&nbsp;<strong>Si on avait pu fusionner en ressortant, on n'en aurait fait qu'une bouchée&nbsp;!</strong> C'est pour ça que je t'avais demandé de garder ton Potala&nbsp;!&nbsp;»
+      <cite>— Goku, à Vegeta</cite>
+    </div>
+
+    <p>Cette déclaration verrouille la hiérarchie. <strong>Végetto &gt; Super Buu.</strong> Et par contrecoup : Goku seul — ou Goku + Vegeta sans fusion — est structurellement en dessous de Super Buu.</p>
+
+    <p>Les trois preuves convergent vers la même conclusion. Ce n'est pas une coïncidence — c'est la narration qui construit cette réalité de façon cohérente.</p>
+  </section>
+
+  <!-- PARTIE III -->
+  <section class="section" id="kidbuu">
+    <p class="part">Partie III</p>
+    <h2 class="section-title">Kid Buu : un adversaire calibré<br>pour le combat final</h2>
+
+    <p>Kid Buu affronte Goku en Super Saiyan 3. Le combat est intense, Goku est mis en difficulté, mais il tient le rythme. Ce niveau de combat est cohérent avec ce que Goku a montré contre Gros Buu.</p>
+
+    <p>La question de l'origine précise de Kid Buu — pourquoi cette forme apparaît après les extractions et non une autre forme de Buu — sera traitée dans un article dédié. Ce qui nous intéresse ici, c'est son <em>positionnement narratif</em> : Kid Buu est conçu pour être l'adversaire du combat final, un adversaire que Goku peut affronter.</p>
+
+    <p>C'est un calibrage délibéré de Toriyama. L'auteur avait établi depuis le début que les enfants devaient être les héros de l'arc — puis il a dû ajuster quand ce plan a évolué. Kid Buu est la solution narrative : suffisamment fort pour être une menace, mais à la portée de Goku en SSJ3. Pas Super Buu.</p>
+
+    <div class="proof">
+      «&nbsp;Mais je voulais laisser la place aux jeunes… Pour l'avenir de la Terre…&nbsp;»
+      <cite>— Goku, sur ses choix pendant l'arc Boo</cite>
+    </div>
+
+    <p>Goku lui-même n'a jamais prétendu que Kid Buu était le plus puissant des Buu. La communauté a fait cette inférence seule, à partir du seul fait que Kid Buu est l'adversaire du combat final — ce qui est une confusion entre <em>rôle narratif</em> et <em>niveau de puissance</em>.</p>
+  </section>
+
+  <!-- PARTIE IV — HIÉRARCHIE -->
+  <section class="section" id="hierarchie">
+    <p class="part">Partie IV</p>
+    <h2 class="section-title">La hiérarchie que la narration impose</h2>
+
+    <p>Le manga n'a jamais affirmé que Kid Buu était plus puissant que Super Buu. Il ne l'a pas dit. Il ne l'a pas montré. Voici ce qu'il a établi :</p>
+
+    <div class="hierarchy">
+      <h3>Hiérarchie établie par les preuves narratives</h3>
+
+      <div class="hier-row">
+        <span class="hier-label big">Super Buu</span>
+        <span class="hier-gt">&gt;&gt;</span>
+        <span class="hier-label big">Goku SSJ3</span>
+      </div>
+      <div class="hier-note">→ Goku ne tente jamais de l'affronter · Fusion Potala obligatoire · Végetto = « une bouchée »</div>
+
+      <hr class="hier-divider">
+
+      <div class="hier-row">
+        <span class="hier-label big">Kid Buu</span>
+        <span class="hier-gt">≈</span>
+        <span class="hier-label big">Goku SSJ3</span>
+      </div>
+      <div class="hier-note">→ Combat équilibré · Niveau cohérent avec le calibrage de l'arc</div>
+
+      <div class="hier-conclusion">
+        Donc : Super Buu &gt;&gt; Kid Buu
+      </div>
+    </div>
+
+    <p>Kid Buu est une puissance formidable — assez pour mettre Goku en difficulté, assez pour exiger la Genkidama et les énergies de toute la Terre. Mais il ne se situe pas au niveau de Super Buu.</p>
+
+    <p>L'affirmer, c'est ignorer ce que le manga a pris soin de démontrer méthodiquement sur plusieurs dizaines de chapitres. C'est confondre le rôle dramatique d'un personnage avec son niveau de puissance. Ce sont deux choses différentes, et les distinguer est précisément ce que la dragonballologie permet de faire.</p>
+  </section>
+
+  <!-- NOTE KAIOSHINKAI -->
+  <section class="section" id="kaioshinkai">
+    <div class="note-box">
+      <div class="note-label">Note méthodologique — Le Kaioshinkai</div>
+      <p>Certains avancent que les conditions du Kaioshinkai — le lieu du combat contre Kid Buu — seraient différentes de la Terre et expliqueraient des variations de performance. Le manga ne fournit aucune information de ce type. En l'absence de tout élément textuel, cette hypothèse est une extrapolation sans fondement. <strong>La dragonballologie ne travaille pas avec ce que le manga n'a pas dit.</strong></p>
+    </div>
+  </section>
+
+  <!-- Articles liés -->
+  <aside class="articles-lies">
+    <h3>Articles liés — à venir</h3>
+    <ul>
+      <li>Le combat Goku vs Gros Buu : ce qu'un retcon change à la lecture</li>
+      <li>L'apparition de Kid Buu : une incohérence narrative assumée</li>
+    </ul>
+  </aside>
+
+</main>
+
+<!-- ── Footer ── -->
+<footer>
+  <p>Debat-Z · Dragonballologie · <a href="/">debat-z.com</a></p>
+</footer>
+
+</body>
+</html>
